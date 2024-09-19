@@ -1,39 +1,46 @@
+/* تنسيق الجسم */
 body {
-    font-family: Times New Roman, serif;
+    font-family: Times New Roman, sans-serif;
     background-color: #595959;
-    margin: 10;
-    padding: 20px;
+    margin: 0;
+    padding: 0; /* إزالة الحشو الافتراضي */
     line-height: 1.15; /* المسافة بين الأسطر */
+    overflow-x: hidden; /* منع التمرير الأفقي إذا كان هناك عناصر تتجاوز العرض */
 }
 
+/* تنسيق الحاوية الرئيسية */
 .container {
-    max-width: 100%;
+    max-width: 100%; /* عرض الحاوية يتناسب مع العرض الكامل */
+    width: 100%; /* تأكيد استخدام العرض الكامل */
     background-color: white;
     padding: 20px;
-    margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* تشمل الحشو والحدود في العرض الكلي */
 }
 
+/* تنسيق عنوان الصفحة */
 h1 {
     color: #000;
     text-align: center;
-    font-size: 2.5em; /* حجم خط h1 */
+    font-size: 3em;
 }
 
+/* تنسيق العناوين الثانوية */
 h2 {
     color: #000;
-    font-size: 1.5em; /* حجم خط h2 */
 }
 
+/* تنسيق الأقسام */
 .section {
-    position: relative;
+    position: relative; /* تمكين الوضع النسبي لتحديد موقع الخط الفاصل */
     margin-bottom: 20px;
     padding-bottom: 20px;
-    max-width: 100%;
+    max-width: 100%; /* تعيين أقصى عرض للقسم ليكون 100% */
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; /* لتوسيع العنصر */
 }
 
+/* تنسيق عنوان القسم */
 .section-title {
     background-color: transparent;
     color: #333;
@@ -42,24 +49,27 @@ h2 {
     font-weight: bold;
 }
 
-/* الخط الفاصل لجميع الأقسام باستثناء قسم languages-section */
-.section:not(.languages-section)::after {
+/* تنسيق الخط الفاصل في الأسفل */
+.section::after {
     content: "";
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 80%;
-    border-bottom: 3px solid #000;
+    right: 0; /* بداية الخط الفاصل من اليمين */
+    width: 80%; /* عرض الخط الفاصل */
+    border-bottom: 3px solid #000; /* لون وتنسيق الخط الفاصل */
 }
 
+/* تنسيق محتوى الأقسام */
 .content {
     padding: 10px;
 }
 
+/* تحديد المسافة بين الفقرات */
 p {
-    margin: 0.5em 0;
+    margin: 0.5em 0; /* المسافة بين الفقرات */
 }
 
+/* تنسيق القوائم */
 ul {
     list-style: none;
     padding: 0;
@@ -69,6 +79,7 @@ ul li {
     padding: 5px 0;
 }
 
+/* تنسيق الروابط */
 a {
     color: #007bff;
     text-decoration: none;
@@ -78,6 +89,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* تنسيق قسم الاتصال */
 .contact {
     font-size: 0.9em;
     color: #666;
@@ -85,82 +97,69 @@ a:hover {
     margin-bottom: 20px;
 }
 
+/* تنسيق المهارات */
 .skills ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* المسافة بين العناصر */
 }
 
 .skills ul li {
-    width: calc(50% - 10px); /* عرض العناصر مع المسافة بين العناصر */
-}
-
-.Languages ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* المسافة بين العناصر */
-}
-
-.Languages ul li {
-    width: calc(50% - 10px); /* عرض العناصر مع المسافة بين العناصر */
-}
-
-.courses-list {
-    list-style-type: decimal;
-    padding-left: 20px;
-    margin: 0;
-    line-height: 1.15;
-}
-
-.courses-list li {
+    width: 45%;
     margin-bottom: 10px;
 }
 
-/* استعلامات الوسائط لتصميم متجاوب */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2em; /* حجم خط h1 على الشاشات الصغيرة */
-    }
-    
-    h2 {
-        font-size: 1.3em; /* حجم خط h2 على الشاشات الصغيرة */
-    }
-    
-    .section-title {
-        font-size: 1em; /* حجم خط العناوين الفرعية على الشاشات الصغيرة */
-    }
-    
-    .content {
-        font-size: 0.9em; /* حجم خط النصوص في المحتوى */
-    }
-    
-    .skills ul, .Languages ul {
-        display: block;
-    }
-    
-    .skills ul li, .Languages ul li {
-        width: 100%; /* عرض العناصر بشكل كامل */
-    }
-    
-    .courses-list {
-        padding-left: 15px; /* تعديل المسافة في القوائم */
-    }
+/* تنسيق اللغات */
+.Languages ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
+.Languages ul li {
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+/* تنسيق الصورة في أعلى يسار الصفحة بشكل دائرة صغيرة مع border */
+.image-container {
+    position: absolute; /* يسمح بتحديد الموقع بدقة */
+    top: 20px; /* المسافة من أعلى الصفحة */
+    left: 20px; /* المسافة من يسار الصفحة */
+    z-index: 10; /* لضمان أن الصورة فوق العناصر الأخرى */
+    width: 70px; /* عرض الـ div الذي يحتوي الصورة */
+    height: 70px; /* ارتفاع الـ div الذي يحتوي الصورة */
+    border: 3px solid #000; /* border حول الصورة */
+    border-radius: 50%; /* يجعل الـ div دائري */
+    display: flex;
+    align-items: center; /* لضبط محاذاة الصورة عمودياً */
+    justify-content: center; /* لضبط محاذاة الصورة أفقياً */
+    overflow: hidden; /* يضمن أن الصورة لا تتجاوز حدود الـ div */
+}
+
+.image-container img {
+    width: 100%; /* عرض الصورة يتناسب مع عرض الـ div */
+    height: 100%; /* ارتفاع الصورة يتناسب مع ارتفاع الـ div */
+    object-fit: cover; /* يضمن ملء الصورة للدائرة دون تشويه */
+}
+
+/* تنسيق التدرج مع الشاشات الصغيرة */
+@media (max-width: 768px) {
     h1 {
-        font-size: 1.5em; /* تقليل حجم الخط أكثر على الشاشات الأصغر */
-    }
-    
-    h2 {
-        font-size: 1.2em; /* تقليل حجم خط h2 أكثر */
+        font-size: 2.5em; /* حجم خط أصغر للعناوين الكبيرة على الشاشات الصغيرة */
     }
     
     .section-title {
-        font-size: 0.9em; /* تقليل حجم خط العناوين الفرعية أكثر */
+        font-size: 1em; /* حجم خط أصغر لعناوين الأقسام على الشاشات الصغيرة */
     }
     
-    .content {
-        font-size: 0.8em; /* تقليل حجم خط النصوص في المحتوى */
+    .skills ul li,
+    .Languages ul li {
+        width: 100%; /* عرض العناصر بنسبة 100% على الشاشات الصغيرة */
+    }
+    
+    .image-container {
+        top: 10px; /* تقليل المسافة من أعلى الصفحة */
+        left: 10px; /* تقليل المسافة من يسار الصفحة */
+        width: 50px; /* تقليل حجم الـ div الذي يحتوي الصورة */
+        height: 50px; /* تقليل ارتفاع الـ div الذي يحتوي الصورة */
     }
 }
