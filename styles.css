@@ -1,7 +1,7 @@
 body {
     font-family: Times New Roman, serif;
     background-color: #595959;
-    margin: 0;
+    margin: 10;
     padding: 20px;
     line-height: 1.15; /* المسافة بين الأسطر */
 }
