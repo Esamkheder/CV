@@ -1,0 +1,166 @@
+body {
+    font-family: Times New Roman, serif;
+    background-color: #595959;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.15; /* المسافة بين الأسطر */
+}
+
+.container {
+    max-width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+    font-size: 2.5em; /* حجم خط h1 */
+}
+
+h2 {
+    color: #000;
+    font-size: 1.5em; /* حجم خط h2 */
+}
+
+.section {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    background-color: transparent;
+    color: #333;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* الخط الفاصل لجميع الأقسام باستثناء قسم languages-section */
+.section:not(.languages-section)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    border-bottom: 3px solid #000;
+}
+
+.content {
+    padding: 10px;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.contact {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* المسافة بين العناصر */
+}
+
+.skills ul li {
+    width: calc(50% - 10px); /* عرض العناصر مع المسافة بين العناصر */
+}
+
+.Languages ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* المسافة بين العناصر */
+}
+
+.Languages ul li {
+    width: calc(50% - 10px); /* عرض العناصر مع المسافة بين العناصر */
+}
+
+.courses-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin: 0;
+    line-height: 1.15;
+}
+
+.courses-list li {
+    margin-bottom: 10px;
+}
+
+/* استعلامات الوسائط لتصميم متجاوب */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* حجم خط h1 على الشاشات الصغيرة */
+    }
+    
+    h2 {
+        font-size: 1.3em; /* حجم خط h2 على الشاشات الصغيرة */
+    }
+    
+    .section-title {
+        font-size: 1em; /* حجم خط العناوين الفرعية على الشاشات الصغيرة */
+    }
+    
+    .content {
+        font-size: 0.9em; /* حجم خط النصوص في المحتوى */
+    }
+    
+    .skills ul, .Languages ul {
+        display: block;
+    }
+    
+    .skills ul li, .Languages ul li {
+        width: 100%; /* عرض العناصر بشكل كامل */
+    }
+    
+    .courses-list {
+        padding-left: 15px; /* تعديل المسافة في القوائم */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* تقليل حجم الخط أكثر على الشاشات الأصغر */
+    }
+    
+    h2 {
+        font-size: 1.2em; /* تقليل حجم خط h2 أكثر */
+    }
+    
+    .section-title {
+        font-size: 0.9em; /* تقليل حجم خط العناوين الفرعية أكثر */
+    }
+    
+    .content {
+        font-size: 0.8em; /* تقليل حجم خط النصوص في المحتوى */
+    }
+}
