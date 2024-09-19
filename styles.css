@@ -49,15 +49,7 @@ h2 {
     font-weight: bold;
 }
 
-/* تنسيق الخط الفاصل في الأسفل */
-.section::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0; /* بداية الخط الفاصل من اليمين */
-    width: 80%; /* عرض الخط الفاصل */
-    border-bottom: 3px solid #000; /* لون وتنسيق الخط الفاصل */
-}
+/* تنسيق الخط الفاصل في الأسفل لكل الأقسام ما عدا قسم اللغات */
 .section:not(.languages-section)::after {
     content: "";
     position: absolute;
