@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background-color: #616569;
     margin: 0;
     padding: 20px;
     line-height: 1.15; /* المسافة بين الأسطر */
@@ -15,8 +15,9 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #000;
     text-align: center;
+    font-size: 10em;
 }
 
 h2 {
