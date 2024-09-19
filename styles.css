@@ -24,7 +24,6 @@ h2 {
 
 .section {
     margin-bottom: 20px;
-    text-align: center
 }
 
 .section-title {
@@ -59,7 +58,8 @@ a:hover {
 .contact {
     font-size: 0.9em;
     color: #666;
-     text-align: center;
+    text-align: center; /* النص في منتصف السطر */
+    margin-bottom: 20px;
 }
 
 .skills ul {
