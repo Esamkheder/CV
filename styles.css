@@ -1,7 +1,7 @@
 body {
-    font-family: Times New Roman, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: center;
+    margin: 0;
     padding: 20px;
 }
 
@@ -13,7 +13,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1 {
+    color: #333;
+    text-align: center; /* النص في منتصف السطر */
+}
+
+h2 {
     color: #333;
 }
 
