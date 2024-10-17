@@ -282,6 +282,13 @@ section {
         flex-direction: column;
         align-items: center;
     }
+    .main{
+        background-image: url(images/background.png) no-repeat;
+        width:auto;
+        height: fit-content;
+        background-position-x: 70%;;
+        background-attachment: fixed;
+    }
 
 }
 
