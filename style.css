@@ -316,7 +316,8 @@ section {
     }
 
     .navigation a{
-        padding-left: 3px;
+        padding-left: 10px;
+        font-size: 1em;
         
     }
 
@@ -351,7 +352,7 @@ section {
         position: absolute;
         top: 63px;
         left: 0px;
-        width: 115px;
+        width: 100px;
         height: 5px;
         background-color: #0037ff;
         border-radius: 10px ;
@@ -375,7 +376,7 @@ section {
         position: absolute;
         top: 63px;
         left: 0px;
-        width: 110px;
+        width: 100px;
         height: 5px;
         background-color: #0037ff;
         border-radius: 10px ;
