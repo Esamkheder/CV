@@ -62,38 +62,67 @@
             </div>
         </div>
     </section>
-
     <section class="COURSES" id="COURSES">
-         <h2 class="title">My Resume</h2>
-         <div class="content">
-            <div class="card">
-                <div class="info">
-                    <h3>COURSES </h3>
-                    <h4>September 2023</h4>
-                    <p>“Artificial intelligence” at Telecom Egypt in Alexandria </p>
-                    <hr>
-                    <h4>October 2023</h4>
-                    <p>Cisco Certified Network Associate (CCNA 200-301) internship 
-                        at ICG Innovation in Alexandria. </p>
-                </div>
+    <h2 class="title">My Resume</h2>
+    <div class="container">
+        <div class="tab_box">
+            <button class="tab_btn active">Corses</button>
+            <button class="tab_btn">Skills</button>
+            <button class="tab_btn">Language</button>
+            <div class="line"></div>
+        </div>
+        <div class="content_box">
+            <div class="content active">
+                <h2>Corses</h2>
+                <h4>September 2023</h4>
+                <p>“Artificial intelligence” at Telecom Egypt in Alexandria </p>
+                <hr>
+                <h4>October 2023</h4>
+                <p>Cisco Certified Network Associate (CCNA 200-301) internship 
+                    at ICG Innovation in Alexandria. </p>
             </div>
-            <div class="card">
-                <div class="info">
-                    <h3>SKILLS </h3>
-                    <div class="skills">
-                        <li>Python (programing language)</li>
-                        <li>MATLAB (software)</li>
-                        <li>Cisco packet tracer (software)</li>
-                        <li>GNS3 (software)</li>
+            <div class="content">
+                <h2>Skills</h2>
+                <li>Python (programing language)</li>
+                <li>MATLAB (software)</li>
+                <li>Cisco packet tracer (software)</li>
+                <li>GNS3 (software)</li>
+            </div>
+            <div class="content">
+                <h2>Language</h2>
+                <li>Arabic (Mother tongue)</li>
+                <li>MEnglish (good)</li>
+    
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabs=document.querySelectorAll('.tab_btn');
+        const all_content=document.querySelectorAll('.content');
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener('click',(e)=>{
+                tabs.forEach(tab=>{tab.classList.remove('active')});
+                tab.classList.add('active');
 
 
-                    </div>
-                </div>
-            </div>
-        
-       
+                
+            var line= document.querySelector('.line');
+            line.style.width =e.target.offsetWidth + "px";
+            line.style.left =e.target.offsetLeft + "px";
+            all_content.forEach(content=>(content.classList.remove('active')));
+            all_content[index].classList.add('active');
+
+            })
+        })
+
+    </script>
+
+
+
 
     </section>
+
+
 
     <section class="projects" id="projects">
         <h2 class="title">Projects</h2>
