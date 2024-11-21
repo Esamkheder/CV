@@ -459,6 +459,9 @@ section {
     body{
         font-size: 12px;
     }
+    .main{
+        min-height: 80vh;
+    }
 
     .main-content h2{
         font-size: 0.8em;
@@ -522,6 +525,9 @@ section {
     body{
         font-size: 10px;
     }
+    .main{
+        min-height: 80vh;
+    }
         .line{
         position: absolute;
         top: 63px;
@@ -549,7 +555,7 @@ section {
         position: fixed;
         width: 100%;
         height: 100vh;
-        top :80px;
+        top :40px;
         left: 100%;
         text-align: center;
         transition: all 0.5s;
