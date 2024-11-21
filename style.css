@@ -96,6 +96,7 @@ a:active{
 
 
 section {
+    min-height: 80vh;
     padding: 100px 200px;
 }
 
@@ -108,10 +109,6 @@ section {
     background-position: center;
     background-attachment: fixed;
 }
-section.main{
-    min-height: 80vh;
-}
-
 
 .main h2 {
     color: #fff;
