@@ -83,7 +83,7 @@ a:active{
 }
 .logo{
     font-size: 1.8rem;
-    color: #3a6cf4;
+    color: #0037ff;
     font-weight: 800;
     cursor: pointer;
     text-decoration: none;
@@ -510,7 +510,7 @@ section {
         left: 100%;
         text-align: center;
         transition: all 0.5s;
-        background: #fff;
+        background: #f0f0f0;
     }
     nav ul li {
         display: block;
@@ -573,7 +573,7 @@ section {
         left: 100%;
         text-align: center;
         transition: all 0.5s;
-        background: #fff;
+        background: #f0f0f0;
     }
     nav ul li {
         display: block;
