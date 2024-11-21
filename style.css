@@ -107,6 +107,8 @@ section {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+section.main{
     min-height: 80vh;
 }
 
