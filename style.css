@@ -466,6 +466,11 @@ section {
     .main{
         min-height: 80vh;
     }
+.logo:hover, 
+.logo.active{
+    background: none;
+    color: #0037ff;
+}
 
     .main-content h2{
         font-size: 0.8em;
@@ -547,6 +552,11 @@ section {
         justify-content: flex-start;
         align-items: flex-start;
     }
+.logo:hover, 
+.logo.active{
+    background: none;
+    color: #0037ff;
+}
     nav ul li a{
         font-size: 16px;
 
