@@ -37,7 +37,7 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a{
-    color: #3a6cf4;
+    color: #0037ff;
     font-size: 17px;
     text-transform: uppercase;
     text-decoration: none;
@@ -83,7 +83,7 @@ a:active{
 }
 .logo{
     font-size: 1.8rem;
-    color: var(#3a6cf4);
+    color: #0037ff;
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease-in-out;
