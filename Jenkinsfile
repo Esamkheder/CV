@@ -1,22 +1,23 @@
-!#/bin/bash
+
 pipeline {
     agent any
 
     stages {
-        stage('Vheck Files'){
+        stage('Check Files') {
             steps {
-                sh 'echo "Cheking CV Projects..."'
-                sh 'ls -la'
-                sh 'test -f index.html || exit = 1'
-                sh 'echo "CV check Passed !"'
+                sh 'echo "Checking CV project..."'
+                sh 'test -f index.html'
+                sh 'test -f style.css'
+                sh 'test -f script.js'
+                sh 'echo "All required files exist!"'
             }
         }
 
-        stage('test'){
+        stage('Test') {
             steps {
-                sh 'echo "Running basic tests...."'
+                sh 'echo "Running basic tests..."'
                 sh 'grep -q "<html" index.html'
-                sh 'echo "html test passed!!!"'
+                sh 'echo "HTML test passed!"'
             }
         }
     }
