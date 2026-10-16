@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Build Docker Image'){
             steps {
-                sh 'docker build -t cv-web:1.0 .'
+                sh 'docker build -t cv-web:2.0 .'
             }
         }
     }

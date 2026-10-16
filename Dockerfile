@@ -8,6 +8,6 @@ RUN chmod 755 /usr/share/nginx/html && \
     chmod 755 /usr/share/nginx/html/images && \
     chmod 644 /usr/share/nginx/html/images/*
 
-EXPOSE 80
+EXPOSE 81
 
 CMD ["nginx" , "-g" ,"daemon off"]
