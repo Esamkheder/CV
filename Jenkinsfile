@@ -15,8 +15,13 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo "Running basic tests..."'
-                sh 'grep -q "<html" index.html'
+                sh 'grep -qi "<html" index.html'
                 sh 'echo "HTML test passed!"'
+            }
+        }
+        stage('Build Docker Image'){
+            steps {
+                sh 'docker build -t cv-web:1.0 .'
             }
         }
     }
