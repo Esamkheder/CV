@@ -16,7 +16,6 @@ pipeline {
             steps {
                 sh 'echo "Running basic tests..."'
                 sh 'grep -q "<html" index.html'
-                sh 'exit 1'
                 sh 'echo "HTML test passed!"'
             }
         }
