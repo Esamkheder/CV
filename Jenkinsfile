@@ -21,7 +21,12 @@ pipeline {
         }
         stage('Build Docker Image'){
             steps {
-                sh 'docker build -t cv-web:3.0 .'
+                sh 'docker build -t cv-web:4.0 .'
+            }
+        }
+        stage('Run Docker Container'){
+            steps {
+                sh 'docker run -d --name cv-web-jenkins -p8081:80 cv-web:4.0'
             }
         }
     }
