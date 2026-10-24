@@ -26,6 +26,7 @@ pipeline {
         }
         stage('Run Docker Container'){
             steps {
+                sh 'docker rm -f cv-web-jenkins || true'
                 sh 'docker run -d --name cv-web-jenkins -p8081:80 cv-web:4.0'
             }
         }
