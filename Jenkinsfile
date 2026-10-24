@@ -21,13 +21,26 @@ pipeline {
         }
         stage('Build Docker Image'){
             steps {
-                sh 'docker build -t cv-web:4.0 .'
+                sh 'docker build -t essamkhedr/cv-web:4.0 .'
+            }
+        }
+
+        stage('Push to Docker Hub'){
+            steps {
+                withCredentials([usernamePassword(
+                    credentialsId: 'dockerhub-creds'
+                    usernameVariable: 'DOCKER_USERNAME',
+                    passwordVariable: 'DOCKER_PASSWORD'
+                )]) { ...
+                    sh 'echo $DOCKER_TOKEN' | docker login -u "$DOCKER_USERNAME" --password-stdin docker push essamkhedr/cv-web:4.0 docker logout
+                    ...
+                }
             }
         }
         stage('Run Docker Container'){
             steps {
                 sh 'docker rm -f cv-web-jenkins || true'
-                sh 'docker run -d --name cv-web-jenkins -p8081:80 cv-web:4.0'
+                sh 'docker run -d --name cv-web-jenkins -p8081:80 essamkhedr/cv-web:4.0'
             }
         }
     }
