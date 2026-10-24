@@ -29,11 +29,11 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(
                     credentialsId: 'dockerhub-creds'
-                    usernameVariable: 'DOCKER_USER',
+                    usernameVariable: 'DOCKER_USER'
                     passwordVariable: 'DOCKER_TOKEN'
                 )]) { 
                     sh '''
-                        echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin 
+                        echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USER" --password-stdin 
                         docker push essamkhedr/cv-web:4.0 
                         docker logout
                     '''
