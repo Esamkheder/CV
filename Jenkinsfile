@@ -31,10 +31,14 @@ pipeline {
                     credentialsId: 'dockerhub-creds'
                     usernameVariable: 'DOCKER_USERNAME',
                     passwordVariable: 'DOCKER_PASSWORD'
-                )]) { ...
-                    sh 'echo $DOCKER_TOKEN' | docker login -u "$DOCKER_USERNAME" --password-stdin docker push essamkhedr/cv-web:4.0 docker logout
-                    ...
+                )]) { 
+                    sh '''
+                        echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin 
+                        docker push essamkhedr/cv-web:4.0 
+                        docker logout
+                    '''
                 }
+
             }
         }
         stage('Run Docker Container'){
